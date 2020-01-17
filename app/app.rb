@@ -4,6 +4,9 @@ require 'sinatra'
 require './app/util'
 require './app/move'
 
+set :bind, '0.0.0.0'
+set :logging, false
+
 use Rack::PostBodyContentTypeParser
 
 appearance = {
