@@ -10,9 +10,9 @@ set :logging, false
 use Rack::PostBodyContentTypeParser
 
 appearance = {
-  color: "#00FF00",
-  head_type: "regular",
-  tail_type: "regular",
+  color: '#4169E1',
+  head_type: 'pixel',
+  tail_type: 'bolt'
 }
 
 get '/' do
