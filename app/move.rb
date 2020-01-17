@@ -8,7 +8,6 @@ class Navigation
   end
 
   def move(board)
-
     next_move = rand_move
     dump(next_move)
     while collides(next_move, board)
@@ -54,11 +53,11 @@ class Navigation
     coords[:y] += move_coords[:y]
     puts "New coords: #{coords[:x]}/#{coords[:y]}"
 
-    collide_x = ! coords[:x].between?(0, board[:board][:width]-1)
-    collide_y = ! coords[:y].between?(0, board[:board][:height]-1)
+    collide_x = !coords[:x].between?(0, board[:board][:width] - 1)
+    collide_y = !coords[:y].between?(0, board[:board][:height] - 1)
 
-    puts "X Collition ahead!" if collide_x
-    puts "Y Collition ahead!" if collide_y
+    puts 'X Collition ahead!' if collide_x
+    puts 'Y Collition ahead!' if collide_y
 
     collide_x || collide_y
   end
